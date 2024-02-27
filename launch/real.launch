@@ -1,5 +1,8 @@
 <launch>
+    <!-- Change car name to match the name of the car, e.g. car1 -->
+    <arg name="car_name" default="car" />
     <include file="$(find mushr_pf)/launch/ParticleFilter.launch">
         <arg name="publish_tf" value="true" />
+        <arg name="car_name" default="/$(arg car_name)" />
     </include>
 </launch>
